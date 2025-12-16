@@ -5,7 +5,11 @@ if kolvo != 0:
 if kolvo != 1:
     print("Неверный ввод")
 else:
-    if time[0:ind].isdigit() == False or time[ind:len(time)].isdigit() == False:
+    if time[0:ind].isdigit() == False and time[ind:len(time)].isdigit() == False:
+        print("Неверный ввод")
+    elif time[0:ind].isdigit() == True and time[ind:len(time)].isdigit() == False:
+        print("Неверный ввод")
+    elif time[0:ind].isdigit() == False and time[ind:len(time)].isdigit() == True:
         print("Неверный ввод")
     else:
         hours = int(time[0:ind])
