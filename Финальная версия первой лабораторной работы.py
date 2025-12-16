@@ -7,10 +7,7 @@ if kolvo != 1:
 else:
     if time[0:ind].isdigit() == False and time[ind:len(time)].isdigit() == False:
         print("Неверный ввод")
-    elif time[0:ind].isdigit() == True and time[ind:len(time)].isdigit() == False:
-        print("Неверный ввод")
-    elif time[0:ind].isdigit() == False and time[ind:len(time)].isdigit() == True:
-        print("Неверный ввод")
+    
     else:
         hours = int(time[0:ind])
         minutes = int(time[ind:len(time)])
