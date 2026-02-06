@@ -1,6 +1,4 @@
 import random
-
-# Три сортировки
 def selection_sort(array):
     array_copy = array.copy()
     length = len(array_copy)
@@ -50,23 +48,16 @@ def insertion_sort(array):
                 break
         array_copy[j + 1] = key
     return array_copy, comparisons, swaps
-
-# Главная программа
 print("Выберите сортировку:")
 print("1 - Сортировка выбором")
 print("2 - Сортировка пузырьком")
 print("3 - Сортировка вставками")
-
 sort_choice = input("Ваш выбор (1-3): ")
-
 print("\nВыберите режим:")
 print("1 - Демонстрационный")
 print("2 - Интерактивный")
-
 mode_choice = input("Ваш выбор (1-2): ")
-
 if mode_choice == "1":
-    # Демонстрационный режим
     print("\n--- Демонстрационный режим ---")
     demo_array = [random.randint(0, 99) for _ in range(8)]
     print(f"Массив для демонстрации: {demo_array}")
@@ -80,16 +71,12 @@ if mode_choice == "1":
     elif sort_choice == "3":
         result_array, comparisons_count, swaps_count = insertion_sort(demo_array)
         print("Сортировка вставками:")
-    
     print(f"Результат: {result_array}")
     print(f"Сравнений: {comparisons_count}")
     print(f"Перестановок: {swaps_count}")
 
 elif mode_choice == "2":
-    # Интерактивный режим
     print("\n--- Интерактивный режим ---")
-    
-    # Ввод массива
     try:
         array_size = int(input("Введите размер массива: "))
         user_array = []
@@ -102,7 +89,6 @@ elif mode_choice == "2":
     if user_array == []:
         print()
     else:
-        # Выполнение сортировки
         if sort_choice == "1":
             result_array, comparisons_count, swaps_count = selection_sort(user_array)
             print("Сортировка выбором:")
