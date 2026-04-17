@@ -49,13 +49,13 @@ def insertion_sort(array):
         array_copy[j + 1] = key
     return array_copy, comparisons, swaps
 print("Выберите сортировку:")
-print("1 - Сортировка выбором")
-print("2 - Сортировка пузырьком")
-print("3 - Сортировка вставками")
+print("1.Сортировка выбором")
+print("2.Сортировка пузырьком")
+print("3.Сортировка вставками")
 sort_choice = input("Ваш выбор (1-3): ")
 print("\nВыберите режим:")
-print("1 - Демонстрационный")
-print("2 - Интерактивный")
+print("1.Демонстрационный")
+print("2.Интерактивный")
 mode_choice = input("Ваш выбор (1-2): ")
 if mode_choice == "1":
     print("Демонстрационный режим")
