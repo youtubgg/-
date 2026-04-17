@@ -58,7 +58,7 @@ print("1 - Демонстрационный")
 print("2 - Интерактивный")
 mode_choice = input("Ваш выбор (1-2): ")
 if mode_choice == "1":
-    print("\n--- Демонстрационный режим ---")
+    print("Демонстрационный режим")
     demo_array = [random.randint(0, 99) for _ in range(8)]
     print(f"Массив для демонстрации: {demo_array}")
     
@@ -76,7 +76,7 @@ if mode_choice == "1":
     print(f"Перестановок: {swaps_count}")
 
 elif mode_choice == "2":
-    print("\n--- Интерактивный режим ---")
+    print("Интерактивный режим")
     try:
         array_size = int(input("Введите размер массива: "))
         user_array = []
